@@ -55,6 +55,7 @@ class WeeklyOpeningHours {
 }
 
 class DoctorsOffice {
+  final String id;
   final String name;
   final String specialty;
   final WeeklyOpeningHours openingHours;
@@ -62,6 +63,7 @@ class DoctorsOffice {
   final Uri imageURL;
 
   const DoctorsOffice({
+    required this.id,
     required this.name,
     required this.specialty,
     required this.openingHours,
