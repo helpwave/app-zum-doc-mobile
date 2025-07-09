@@ -1,5 +1,5 @@
 /// All Spacing variables
-class Spacing {
+class SpacingValues {
   static const double none = 0;
   static const double xxs = 2;
   static const double xs = 4;
@@ -13,7 +13,7 @@ class Spacing {
 }
 
 /// All border radius variables
-class BorderRadius {
+class BorderRadiusValues {
   static const double none = 0;
   static const double xxs = 2;
   static const double xs = 4;
@@ -26,7 +26,7 @@ class BorderRadius {
 }
 
 /// All border width variables
-class BorderWidth {
+class BorderWidthValues {
   static const double none = 0;
   static const double sm = 1;
   static const double md = 2;
@@ -35,7 +35,7 @@ class BorderWidth {
 }
 
 /// All elevation values
-class Elevation {
+class ElevationValues {
   static const double none = 0;
   static const double xs = 1;
   static const double sm = 2;
