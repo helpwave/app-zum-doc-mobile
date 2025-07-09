@@ -51,7 +51,6 @@ class _RequestScreenState extends State<RequestScreen>
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(SpacingValues.xs),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(BorderRadiusValues.full),
@@ -77,9 +76,8 @@ class _RequestScreenState extends State<RequestScreen>
                   ),
                   color: context.theme.colorScheme.primary,
                 ),
-                indicatorPadding: EdgeInsets.symmetric(
-                  horizontal: -SpacingValues.md,
-                ),
+                indicatorSize: TabBarIndicatorSize.tab,
+                padding: EdgeInsets.all(SpacingValues.xs),
                 dividerHeight: 0,
                 labelColor: Colors.white,
                 labelStyle: TextStyle(fontWeight: FontWeight.bold),
