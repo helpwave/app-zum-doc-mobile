@@ -1,4 +1,5 @@
 import 'package:appzumdoc/components/doctors_office_card.dart';
+import 'package:appzumdoc/components/request_card.dart';
 import 'package:appzumdoc/datatypes/example_data.dart';
 import 'package:appzumdoc/screens/doctor_list.dart';
 import 'package:appzumdoc/theme/theme_model.dart';
@@ -179,7 +180,7 @@ class Dashboard extends StatelessWidget {
                     itemCount: 2,
                     itemBuilder: (context, index) {
                       return DoctorsOfficeCard(
-                        doctorsOffice: exampleDoctorsOffice,
+                        doctorsOffice: ExampleData.doctorsOffice,
                         onTap: () {
                           // TODO navigate to doctors office
                         },
@@ -192,7 +193,7 @@ class Dashboard extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                   ),
                 ),
-                const SizedBox(height: SpacingValues.md,),
+                const SizedBox(height: SpacingValues.md),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -218,13 +219,11 @@ class Dashboard extends StatelessWidget {
                     padding: EdgeInsets.only(bottom: SpacingValues.md),
                     itemCount: 3,
                     itemBuilder: (context, index) {
-                      return SizedBox(
-                        height: 115,
-                        child: Card(
-                          margin: EdgeInsets.zero,
-                          color: context.theme.colorScheme.primary,
-                        ),
-                      );
+                      return [
+                        RequestCard(request: ExampleData.requestAppointment),
+                        RequestCard(request: ExampleData.requestRecipe),
+                        RequestCard(request: ExampleData.requestTransfer),
+                      ][index];
                     },
                     separatorBuilder: (context, index) =>
                         SizedBox(height: SpacingValues.sm),
