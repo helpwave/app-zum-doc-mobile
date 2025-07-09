@@ -16,6 +16,7 @@ class RequestCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Card(
+        margin: EdgeInsets.zero,
         child: Padding(
           padding: const EdgeInsets.all(SpacingValues.md),
           child: Row(

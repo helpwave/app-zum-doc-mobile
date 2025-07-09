@@ -2,6 +2,7 @@ import 'package:appzumdoc/components/doctors_office_card.dart';
 import 'package:appzumdoc/components/request_card.dart';
 import 'package:appzumdoc/datatypes/example_data.dart';
 import 'package:appzumdoc/screens/doctor_list.dart';
+import 'package:appzumdoc/screens/request_screen.dart';
 import 'package:appzumdoc/theme/theme_model.dart';
 import 'package:flutter/material.dart';
 
@@ -220,9 +221,24 @@ class Dashboard extends StatelessWidget {
                     itemCount: 3,
                     itemBuilder: (context, index) {
                       return [
-                        RequestCard(request: ExampleData.requestAppointment),
-                        RequestCard(request: ExampleData.requestRecipe),
-                        RequestCard(request: ExampleData.requestTransfer),
+                        RequestCard(
+                          request: ExampleData.requestAppointment,
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => RequestScreen()),
+                          ),
+                        ),
+                        RequestCard(
+                          request: ExampleData.requestRecipe,
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => RequestScreen()),
+                          ),
+                        ),
+                        RequestCard(
+                          request: ExampleData.requestTransfer,
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => RequestScreen()),
+                          ),
+                        ),
                       ][index];
                     },
                     separatorBuilder: (context, index) =>
